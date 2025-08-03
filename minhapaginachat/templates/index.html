@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+    <form action="/login" method="POST">
+        <h1>Entrar na Plataforma</h1>
+        <div class="input-container">
+            <input name="email" placeholder="Email" type="email" required>
+        </div>
+        <div class="input-container">
+            <input name="senha" placeholder="Senha" type="password" required>
+        </div>
+        {% if erro %}
+            <p style="color:red; text-align:center;">{{ erro }}</p>
+        {% endif %}
+        <button type="submit" class="submit-button">Entrar</button>
+        <div class="register-link">
+            <p>Não está cadastrado? <a href="/cadastro">Cadastrar</a></p>
+        </div>
+    </form>
+    <div style="text-align:center; margin-top:20px;">
+        <a href="/usuarios" style="color:white; text-decoration:none;">Ver usuários cadastrados</a>
+    </div>
+</div>
+
+</body>
+</html>

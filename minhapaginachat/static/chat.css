@@ -1,0 +1,98 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: url(planodefundo.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 100dvh; /* Ajusta altura no mobile corretamente */
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.chat-container {
+    width: 600px;
+    max-width: 95%; /* Ajusta em telas pequenas */
+    height: 90dvh; /* Ajuste dinâmico */
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    padding: 20px;
+    color: white;
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+/* Ajuste de mensagens */
+.chat-messages {
+    flex: 1;
+    overflow-y: auto;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+/* Form de envio */
+.chat-form {
+    display: flex;
+    gap: 10px;
+}
+
+.chat-form input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 0.9rem;
+}
+
+.chat-button {
+    background: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.chat-button:hover {
+    background: #555;
+}
+
+/* Links */
+.chat-links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.chat-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.chat-links a:hover {
+    text-decoration: underline;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+    .chat-container {
+        padding: 15px;
+        font-size: 0.9rem;
+    }
+    .chat-form input {
+        font-size: 0.85rem;
+    }
+    .chat-button {
+        font-size: 0.85rem;
+        padding: 8px 16px;
+    }
+}

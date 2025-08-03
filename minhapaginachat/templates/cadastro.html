@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <form action="/cadastrar" method="POST">
+            <h1>Cadastre-se</h1>
+            <div class="input-container">
+                <input name="nome" placeholder="Nome" type="text" required>
+            </div>
+            <div class="input-container">
+                <input name="idade" placeholder="Idade" type="number" required>
+            </div>
+            <div class="input-container">
+                <input name="email" placeholder="Email" type="email" required>
+            </div>
+            <div class="input-container">
+                <input name="senha" placeholder="Senha" type="password" required>
+            </div>
+            <div class="input-container">
+                <input name="instagram" placeholder="@Instagram (opcional)" type="text">
+            </div>
+            {% if erro %}
+                <p style="color:red; text-align:center;">{{ erro }}</p>
+            {% endif %}
+            <button type="submit" class="submit-button">Cadastre-se</button>
+            <div class="register-link">
+                <p>Já está Cadastrado ? <a href="/">Entrar</a></p>
+            </div>
+        </form>
+
+    </div>
+</body>
+</html>
