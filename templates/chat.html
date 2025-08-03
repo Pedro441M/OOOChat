@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Geral</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/chat.css">
+    <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="chat-container">
+        <h1>Chat Geral</h1>
+        <div class="chat-messages">
+            {% for msg in mensagens %}
+                <p>{{ msg }}</p>
+            {% endfor %}
+        </div>
+        <form method="POST" class="chat-form">
+            <input type="text" name="mensagem" placeholder="Digite sua mensagem..." required>
+            <button type="submit" class="chat-button">Enviar</button>
+        </form>
+        <div class="chat-links">
+            <a href="/usuarios">Voltar</a>
+            <a href="/logout">Sair</a>
+        </div>
+    </div>
+    <script>
+        const chatMessages = document.querySelector('.chat-messages');
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+    </script>
+
+</body>
+</html>

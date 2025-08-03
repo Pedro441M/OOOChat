@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuários</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <h1>Usuários cadastrados</h1>
+        <ul style="color:white; list-style:none; padding:0;">
+            {% for u in usuarios %}
+                <li>{{u.nome}} {% if u.instagram %}- {{u.instagram}}{% endif %}</li>
+            {% endfor %}
+        </ul>
+        <div style="text-align:center; margin-top:20px;">
+            <a href="/" style="color:white; text-decoration:none; margin-right:20px;">Voltar</a>
+            {% if logado %}
+                <button class="buttonchat"><a style="text-decoration: none;color: white;" href="/chat">Ir para Chat Geral</a></button>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
